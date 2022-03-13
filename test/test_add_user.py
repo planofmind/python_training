@@ -12,8 +12,8 @@ def app(request):
 
 
 def test_add_user(app):
-    app.login(username="admin", password="secret")
-    app.create_user(User(
+    app.session.login(username="admin", password="secret")
+    app.user.create(User(
         firstname="Дмитрий",
         middlename="Юрьевич",
         lastname="Журавлёв",
@@ -39,12 +39,12 @@ def test_add_user(app):
         amonth="March",
         ayear="2022")
     )
-    app.logout()
+    app.session.logout()
 
 
 def test_add_empty_user(app):
-    app.login(username="admin", password="secret")
-    app.create_user(User(
+    app.session.login(username="admin", password="secret")
+    app.user.create(User(
         firstname="",
         middlename="",
         lastname="",
@@ -70,4 +70,4 @@ def test_add_empty_user(app):
         amonth="-",
         ayear="")
     )
-    app.logout()
+    app.session.logout()
