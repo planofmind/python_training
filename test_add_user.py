@@ -23,9 +23,9 @@ class TestAddUser(unittest.TestCase):
                          title="Title_here",
                          company="Company_here",
                          address="Address_here",
-                         home="111",
-                         mobile="222",
-                         work="333",
+                         home_phone="111",
+                         mobile_phone="222",
+                         work_phone="333",
                          fax="444",
                          email="qwe@qwe.ru",
                          email2="asd@asd.ru",
@@ -56,9 +56,9 @@ class TestAddUser(unittest.TestCase):
                          title="",
                          company="",
                          address="",
-                         home="",
-                         mobile="",
-                         work="",
+                         home_phone="",
+                         mobile_phone="",
+                         work_phone="",
                          fax="",
                          email="",
                          email2="",
@@ -92,9 +92,9 @@ class TestAddUser(unittest.TestCase):
         wd.find_element_by_name("title").send_keys(user.title)
         wd.find_element_by_name("company").send_keys(user.company)
         wd.find_element_by_name("address").send_keys(user.address)
-        wd.find_element_by_name("home").send_keys(user.home)
-        wd.find_element_by_name("mobile").send_keys(user.mobile)
-        wd.find_element_by_name("work").send_keys(user.work)
+        wd.find_element_by_name("home").send_keys(user.home_phone)
+        wd.find_element_by_name("mobile").send_keys(user.mobile_phone)
+        wd.find_element_by_name("work").send_keys(user.work_phone)
         wd.find_element_by_name("fax").send_keys(user.fax)
         wd.find_element_by_name("email").send_keys(user.email)
         wd.find_element_by_name("email2").send_keys(user.email2)
